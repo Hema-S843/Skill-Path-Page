@@ -1,0 +1,100 @@
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔥 Top Typing Animation */
+.topTyping {
+  position: absolute;
+  top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  border-right: 3px solid white;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.8s infinite;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeSlide 1s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.buttonContainer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;  /* center single button */
+}
+
+/* General Button */
+button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+/* Register Button */
+.registerBtn {
+  background: linear-gradient(45deg, #16a34a, #22c55e);
+  color: white;
+}
+
+/* Already Logged In Button */
+.loginBtn {
+  background: linear-gradient(45deg, #1e3a8a, #2563eb);
+  color: white;
+}
+
+/* Hover Effect */
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Animations */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

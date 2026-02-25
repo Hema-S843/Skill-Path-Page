@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Registration.css";
 
 function Registration() {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [role, setRole] = useState("student");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -43,11 +42,11 @@ function Registration() {
     e.preventDefault();
     if (!validate()) return;
 
-    if (role === "student") {
-      alert("Student Registered Successfully!");
-    } else {
-      alert("Admin Created Successfully!");
-    }
+    alert(
+      role === "student"
+        ? "Student Registered Successfully!"
+        : "Admin Created Successfully!"
+    );
 
     navigate("/dashboard");
 
@@ -67,8 +66,9 @@ function Registration() {
       
       {/* LEFT PANEL */}
       <div className="leftPanel">
-        <h2>Welcome</h2>
-        <p>You are one step away from success 🚀</p>
+        <h1 className="logo">SkillPath</h1>
+        <p className="taglineMain">“Learn Today, Lead Tomorrow.”</p>
+        <p className="taglineSub">“Small Steps, Big Success.”</p>
 
         {role === "student" ? (
           <button onClick={() => setRole("admin")}>Switch to Admin</button>
@@ -79,7 +79,6 @@ function Registration() {
 
       {/* RIGHT PANEL */}
       <div className="rightPanel">
-
         <div className="toggleButtons">
           <button
             className={role === "student" ? "active" : ""}
@@ -99,94 +98,69 @@ function Registration() {
         <h2>{role === "student" ? "Apply as a Student" : "Register as Admin"}</h2>
 
         <form className="formGrid" onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name *"
-              value={formData.firstName}
-              onChange={handleChange}
-              className={errors.firstName ? "errorInput" : ""}
-            />
-            {errors.firstName && <p className="errorText">{errors.firstName}</p>}
-          </div>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name *"
+            value={formData.firstName}
+            onChange={handleChange}
+            className={errors.firstName ? "errorInput" : ""}
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name *"
+            value={formData.lastName}
+            onChange={handleChange}
+            className={errors.lastName ? "errorInput" : ""}
+          />
 
-          <div>
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name *"
-              value={formData.lastName}
-              onChange={handleChange}
-              className={errors.lastName ? "errorInput" : ""}
-            />
-            {errors.lastName && <p className="errorText">{errors.lastName}</p>}
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email *"
+            value={formData.email}
+            onChange={handleChange}
+            className={errors.email ? "errorInput" : ""}
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
 
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email *"
-              value={formData.email}
-              onChange={handleChange}
-              className={errors.email ? "errorInput" : ""}
-            />
-            {errors.email && <p className="errorText">{errors.email}</p>}
-          </div>
-
-          <div>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password *"
-              value={formData.password}
-              onChange={handleChange}
-              className={errors.password ? "errorInput" : ""}
-            />
-            {errors.password && <p className="errorText">{errors.password}</p>}
-          </div>
-
-          <div>
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm Password *"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className={errors.confirmPassword ? "errorInput" : ""}
-            />
-            {errors.confirmPassword && (
-              <p className="errorText">{errors.confirmPassword}</p>
-            )}
-          </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password *"
+            value={formData.password}
+            onChange={handleChange}
+            className={errors.password ? "errorInput" : ""}
+          />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password *"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            className={errors.confirmPassword ? "errorInput" : ""}
+          />
 
           <button type="submit" className="registerBtn">
             {role === "student" ? "Register Student" : "Create Admin"}
           </button>
         </form>
 
-        {/* Divider */}
         <div className="divider">
           <span>OR</span>
         </div>
 
-        {/* Login Section */}
         <div className="loginSection">
           Already logged in?{" "}
           <span onClick={() => navigate("/login")}>Login</span>
         </div>
-
       </div>
     </div>
   );

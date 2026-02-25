@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Aptitute.css";
+import Sidebar from "../Components/Sidebar";
 
 function Aptitute() 
 {
@@ -31,6 +32,8 @@ function Aptitute()
   const progress = Math.round((completed.length / questions.length) * 100);
 
   return (
+  <>
+    <Sidebar />
     <div className="aptitudeContainer">
       {/* Sidebar */}
       <aside className="aptitudeSidebar">
@@ -69,6 +72,7 @@ function Aptitute()
         </button>
       </main>
     </div>
+  </>
   );
 }
 

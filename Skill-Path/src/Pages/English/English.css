@@ -1,0 +1,25 @@
+.english-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.english-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.english-card {
+  background: #f4f6f9;
+  padding: 20px;
+  margin: 15px auto;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.english-card:hover {
+  transform: scale(1.05);
+  background: #e3f2fd;
+}

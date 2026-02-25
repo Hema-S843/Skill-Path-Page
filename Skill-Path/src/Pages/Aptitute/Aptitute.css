@@ -1,157 +1,109 @@
-.aptitudeContainer 
-{
+/* Main Container */
+.aptitudeContainer {
   display: flex;
-  min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
-  background: #111;
-  color: white;
+  height: 100vh;
+  background-color: #f4f8ff; /* Light blue background */
+  font-family: "Segoe UI", sans-serif;
 }
 
 /* Sidebar */
-.aptitudeSidebar 
-{
-  width: 300px;
-  background: #111;
-  border-right: 1px solid #333;
-  display: flex;
-  flex-direction: column;
+.aptitudeSidebar {
+  width: 280px;
+  background-color: #ffffff;
   padding: 20px;
+  border-right: 2px solid #e0e7ff;
+  box-shadow: 2px 0 8px rgba(0, 0, 255, 0.05);
 }
 
-.aptitudeProgress h3 
-{
-  font-size: 18px;
-  margin-bottom: 10px;
+/* Progress Section */
+.aptitudeProgress h3 {
+  color: #1e3a8a; /* Dark Blue */
+  margin-bottom: 15px;
 }
 
-.progressBar 
-{
+.progressBar {
   width: 100%;
-  height: 8px;
-  background: #333;
-  border-radius: 4px;
+  height: 10px;
+  background-color: #e0e7ff;
+  border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-.progress 
-{
+.progress {
   height: 100%;
-  background: #00b894;
-  width: 0;
-  transition: width 0.5s;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  transition: 0.3s ease;
 }
 
-.progressText 
-{
+.progressText {
   font-size: 14px;
-  color: #00b894;
-  margin-bottom: 20px;
+  color: #1e3a8a;
 }
 
-/* Questions list */
-.questionList 
-{
+/* Question List */
+.questionList {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin-top: 20px;
 }
 
-.questionList li 
-{
-  padding: 10px 8px;
+.questionList li {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
+  transition: 0.2s ease;
+  font-size: 14px;
+  color: #1e3a8a;
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  transition: 0.2s;
 }
 
-.questionList li:hover 
-{
-  background: rgba(255, 255, 255, 0.1);
+.questionList li:hover {
+  background-color: #e0e7ff;
 }
 
-.questionList li.active 
-{
-  background: #333;
-  border-left: 4px solid #00b894;
+.questionList li.active {
+  background-color: #2563eb;
+  color: white;
 }
 
-.check 
-{
-  color: #00b894;
-  font-size: 12px;
+.check {
+  margin-right: 8px;
 }
 
 /* Main Content */
-.aptitudeContent 
-{
+.aptitudeContent {
   flex: 1;
-  padding: 30px;
-  background: #1a1a1a;
+  padding: 40px;
+  background-color: #f8fbff;
 }
 
-.aptitudeContent h2 
-{
-  font-size: 24px;
-  color: #00b894;
-  margin-bottom: 20px;
+.aptitudeContent h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
 }
 
-.aptitudeContent p 
-{
+.aptitudeContent p {
   font-size: 16px;
+  color: #334155;
   line-height: 1.6;
-  color: #ccc;
-  margin-bottom: 20px;
 }
 
-.completeBtn 
-{
+/* Button */
+.completeBtn {
+  margin-top: 20px;
   padding: 10px 20px;
-  background: #00b894;
+  background-color: #2563eb;
   border: none;
   border-radius: 8px;
   color: white;
+  font-size: 14px;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
+  transition: 0.2s ease;
 }
 
-.completeBtn:hover 
-{
-  background: #00a07f;
-}
-
-/* Responsive */
-@media (max-width: 900px) 
-{
-  .aptitudeContainer 
-  {
-    flex-direction: column;
-  }
-
-  .aptitudeSidebar 
-  {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 10px;
-  }
-
-  .questionList 
-  {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .aptitudeContent 
-  {
-    padding: 20px;
-  }
+.completeBtn:hover {
+  background-color: #1e40af;
 }

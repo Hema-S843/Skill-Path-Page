@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Registration.css";
 
-function Registration() 
-{
+function Registration() {
 
   const navigate = useNavigate(); 
   const [role, setRole] = useState("student");
@@ -17,15 +16,12 @@ function Registration()
   });
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => 
-  {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error as user types
-
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const validate = () => 
-  {
+  const validate = () => {
     const newErrors = {};
     const { firstName, lastName, email, password, confirmPassword } = formData;
 
@@ -35,8 +31,7 @@ function Registration()
     if (!password) newErrors.password = "This field is required";
     if (!confirmPassword) newErrors.confirmPassword = "This field is required";
 
-    if (password && confirmPassword && password !== confirmPassword) 
-    {
+    if (password && confirmPassword && password !== confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
 
@@ -44,25 +39,18 @@ function Registration()
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => 
-  {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    if (role === "student") 
-    {
-      console.log("Creating Student:", formData);
+    if (role === "student") {
       alert("Student Registered Successfully!");
-    } 
-   
-    else 
-    {
-      console.log("Creating Admin:", formData);
+    } else {
       alert("Admin Created Successfully!");
     }
+
     navigate("/dashboard");
 
-    // Reset form
     setFormData({
       firstName: "",
       lastName: "",
@@ -76,6 +64,8 @@ function Registration()
 
   return (
     <div className="dualContainer">
+      
+      {/* LEFT PANEL */}
       <div className="leftPanel">
         <h2>Welcome</h2>
         <p>You are one step away from success 🚀</p>
@@ -87,14 +77,21 @@ function Registration()
         )}
       </div>
 
+      {/* RIGHT PANEL */}
       <div className="rightPanel">
+
         <div className="toggleButtons">
-          <button className={role === "student" ? "active" : ""}
-                  onClick={() => setRole("student")}>
-             Student
+          <button
+            className={role === "student" ? "active" : ""}
+            onClick={() => setRole("student")}
+          >
+            Student
           </button>
-          <button  className={role === "admin" ? "active" : ""}
-                   onClick={() => setRole("admin")} >
+
+          <button
+            className={role === "admin" ? "active" : ""}
+            onClick={() => setRole("admin")}
+          >
             Admin
           </button>
         </div>
@@ -109,8 +106,8 @@ function Registration()
               placeholder="First Name *"
               value={formData.firstName}
               onChange={handleChange}
-              className={errors.firstName ? "errorInput" : ""}>
-            </input>
+              className={errors.firstName ? "errorInput" : ""}
+            />
             {errors.firstName && <p className="errorText">{errors.firstName}</p>}
           </div>
 
@@ -121,8 +118,8 @@ function Registration()
               placeholder="Last Name *"
               value={formData.lastName}
               onChange={handleChange}
-              className={errors.lastName ? "errorInput" : ""}>
-            </input>
+              className={errors.lastName ? "errorInput" : ""}
+            />
             {errors.lastName && <p className="errorText">{errors.lastName}</p>}
           </div>
 
@@ -133,8 +130,8 @@ function Registration()
               placeholder="Email *"
               value={formData.email}
               onChange={handleChange}
-              className={errors.email ? "errorInput" : ""}>
-            </input>
+              className={errors.email ? "errorInput" : ""}
+            />
             {errors.email && <p className="errorText">{errors.email}</p>}
           </div>
 
@@ -144,8 +141,8 @@ function Registration()
               name="phone"
               placeholder="Phone"
               value={formData.phone}
-              onChange={handleChange}>
-            </input>
+              onChange={handleChange}
+            />
           </div>
 
           <div>
@@ -155,8 +152,8 @@ function Registration()
               placeholder="Password *"
               value={formData.password}
               onChange={handleChange}
-              className={errors.password ? "errorInput" : ""}>
-            </input>
+              className={errors.password ? "errorInput" : ""}
+            />
             {errors.password && <p className="errorText">{errors.password}</p>}
           </div>
 
@@ -167,8 +164,8 @@ function Registration()
               placeholder="Confirm Password *"
               value={formData.confirmPassword}
               onChange={handleChange}
-              className={errors.confirmPassword ? "errorInput" : ""}>
-            </input>
+              className={errors.confirmPassword ? "errorInput" : ""}
+            />
             {errors.confirmPassword && (
               <p className="errorText">{errors.confirmPassword}</p>
             )}
@@ -178,6 +175,18 @@ function Registration()
             {role === "student" ? "Register Student" : "Create Admin"}
           </button>
         </form>
+
+        {/* Divider */}
+        <div className="divider">
+          <span>OR</span>
+        </div>
+
+        {/* Login Section */}
+        <div className="loginSection">
+          Already logged in?{" "}
+          <span onClick={() => navigate("/login")}>Login</span>
+        </div>
+
       </div>
     </div>
   );

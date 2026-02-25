@@ -1,4 +1,5 @@
-.dashboardContainer {
+.dashboardContainer 
+{
   display: flex;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
@@ -6,7 +7,8 @@
 }
 
 /* Sidebar */
-.sidebar {
+.sidebar 
+{
   width: 250px;
   background: #1e3a8a;
   color: white;
@@ -16,14 +18,16 @@
   border-radius: 0 20px 20px 0;
 }
 
-.logo {
+.logo 
+{
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 50px;
   text-align: center;
 }
 
-.navSections {
+.navSections 
+{
   list-style: none;
   padding: 0;
   display: flex;
@@ -31,7 +35,8 @@
   gap: 20px;
 }
 
-.navSections li {
+.navSections li 
+{
   display: flex;
   align-items: center;
   gap: 15px;
@@ -42,23 +47,27 @@
   transition: 0.3s;
 }
 
-.navSections li:hover {
+.navSections li:hover 
+{
   background: rgba(255, 255, 255, 0.2);
 }
 
-.navSections li.active {
+.navSections li.active 
+{
   background: white;
   color: #1e3a8a;
   font-weight: bold;
 }
 
 /* Icons inside sidebar */
-.navSections .icon {
+.navSections .icon 
+{
   font-size: 18px;
 }
 
 /* Sidebar bottom - profile + logout */
-.sidebarBottom {
+.sidebarBottom 
+{
   margin-top: auto;
   display: flex;
   flex-direction: column;
@@ -68,18 +77,21 @@
   padding-top: 20px;
 }
 
-.profile {
+.profile 
+{
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 14px;
 }
 
-.profileIcon {
+.profileIcon 
+{
   font-size: 40px;
 }
 
-.logoutBtn {
+.logoutBtn 
+{
   padding: 8px 20px;
   border: none;
   border-radius: 20px;
@@ -93,35 +105,42 @@
   transition: 0.3s;
 }
 
-.logoutBtn:hover {
+.logoutBtn:hover 
+{
   background: #ef4444;
 }
 
 /* Main content */
-.mainContent {
+.mainContent 
+{
   flex: 1;
   padding: 40px;
 }
 
-.mainContent h2 {
+.mainContent h2 
+{
   font-size: 28px;
   color: #1e3a8a;
   margin-bottom: 20px;
 }
 
-.mainContent p {
+.mainContent p 
+{
   font-size: 16px;
   color: #333;
   line-height: 1.6;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .dashboardContainer {
+@media (max-width: 900px) 
+{
+  .dashboardContainer 
+  {
     flex-direction: column;
   }
 
-  .sidebar {
+  .sidebar 
+  {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
@@ -129,22 +148,26 @@
     padding: 20px;
   }
 
-  .navSections {
+  .navSections 
+  {
     flex-direction: row;
     gap: 15px;
   }
 
-  .sidebarBottom {
+  .sidebarBottom 
+  {
     flex-direction: row;
     gap: 10px;
     border-top: none;
   }
 
-  .logoutBtn {
+  .logoutBtn 
+  {
     padding: 6px 12px;
   }
 
-  .mainContent {
+  .mainContent 
+  {
     padding: 20px;
   }
 }

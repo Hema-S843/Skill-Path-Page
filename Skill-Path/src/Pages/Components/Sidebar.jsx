@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  FaBook,
-  FaLanguage,
-  FaUniversity,
-  FaUserCircle,
-  FaSignOutAlt,
-  FaBars,
-} from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
+import { FaLanguage } from "react-icons/fa";
+import { FaUniversity } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+
 import "./Sidebar.css";
 
-function Sidebar({ user: propUser }) {
+function Sidebar({ user: propUser }) 
+{
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(true); // sidebar open by default
   const [user, setUser] = useState(propUser || null);
 
   // Check localStorage if propUser is not provided
-  useEffect(() => {
-    if (!propUser) {
+  useEffect(() => 
+  {
+    if (!propUser) 
+    {
       const storedUser = JSON.parse(localStorage.getItem("user")); // e.g. { name: "Hemapriya" }
       if (storedUser) setUser(storedUser);
     }
   }, [propUser]);
 
-  const sections = [
+  const sections = 
+  [
     { name: "Aptitude", icon: <FaBook />, path: "/aptitude" },
     { name: "English", icon: <FaLanguage />, path: "/english" },
     { name: "Telugu", icon: <FaLanguage />, path: "/telugu" },
@@ -46,8 +49,7 @@ function Sidebar({ user: propUser }) {
           {sections.map((section) => (
             <li
               key={section.name}
-              className={location.pathname === section.path ? "active" : ""}
-            >
+              className={location.pathname === section.path ? "active" : ""}>
               <Link to={section.path}>
                 <span className="icon">{section.icon}</span>
                 {isOpen && <span className="linkText">{section.name}</span>}

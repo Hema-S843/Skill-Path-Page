@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "./Aptitute.css";
 
 function Aptitute() 
 {
-  const questions = [
+  const questions = 
+  [
     "Q1 | Number Series",
     "Q2 | Letter Series",
     "Q3 | Coding Decoding",
@@ -17,7 +19,8 @@ function Aptitute()
   const [activeQuestion, setActiveQuestion] = useState(questions[0]);
   const [completed, setCompleted] = useState(["Q1 | Number Series"]);
 
-  const toggleComplete = (q) => {
+  const toggleComplete = (q) => 
+  {
     if (completed.includes(q)) {
       setCompleted(completed.filter((c) => c !== q));
     } else {
@@ -44,8 +47,7 @@ function Aptitute()
             <li
               key={q}
               className={activeQuestion === q ? "active" : ""}
-              onClick={() => setActiveQuestion(q)}
-            >
+              onClick={() => setActiveQuestion(q)}>
               <span className="check">
                 {completed.includes(q) ? "✔" : "⏺"}
               </span>{" "}

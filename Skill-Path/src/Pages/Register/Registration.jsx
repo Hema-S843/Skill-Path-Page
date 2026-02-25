@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Registration.css";
 
-function Registration() {
+function Registration() 
+{
 
   const navigate = useNavigate(); 
   const [role, setRole] = useState("student");
@@ -16,13 +17,15 @@ function Registration() {
   });
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
+  const handleChange = (e) => 
+  {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" }); // clear error as user types
 
   };
 
-  const validate = () => {
+  const validate = () => 
+  {
     const newErrors = {};
     const { firstName, lastName, email, password, confirmPassword } = formData;
 
@@ -32,7 +35,8 @@ function Registration() {
     if (!password) newErrors.password = "This field is required";
     if (!confirmPassword) newErrors.confirmPassword = "This field is required";
 
-    if (password && confirmPassword && password !== confirmPassword) {
+    if (password && confirmPassword && password !== confirmPassword) 
+    {
       newErrors.confirmPassword = "Passwords do not match";
     }
 
@@ -40,14 +44,19 @@ function Registration() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => 
+  {
     e.preventDefault();
     if (!validate()) return;
 
-    if (role === "student") {
+    if (role === "student") 
+    {
       console.log("Creating Student:", formData);
       alert("Student Registered Successfully!");
-    } else {
+    } 
+   
+    else 
+    {
       console.log("Creating Admin:", formData);
       alert("Admin Created Successfully!");
     }
@@ -80,16 +89,12 @@ function Registration() {
 
       <div className="rightPanel">
         <div className="toggleButtons">
-          <button
-            className={role === "student" ? "active" : ""}
-            onClick={() => setRole("student")}
-          >
-            Student
+          <button className={role === "student" ? "active" : ""}
+                  onClick={() => setRole("student")}>
+             Student
           </button>
-          <button
-            className={role === "admin" ? "active" : ""}
-            onClick={() => setRole("admin")}
-          >
+          <button  className={role === "admin" ? "active" : ""}
+                   onClick={() => setRole("admin")} >
             Admin
           </button>
         </div>
@@ -104,8 +109,8 @@ function Registration() {
               placeholder="First Name *"
               value={formData.firstName}
               onChange={handleChange}
-              className={errors.firstName ? "errorInput" : ""}
-            />
+              className={errors.firstName ? "errorInput" : ""}>
+            </input>
             {errors.firstName && <p className="errorText">{errors.firstName}</p>}
           </div>
 
@@ -116,8 +121,8 @@ function Registration() {
               placeholder="Last Name *"
               value={formData.lastName}
               onChange={handleChange}
-              className={errors.lastName ? "errorInput" : ""}
-            />
+              className={errors.lastName ? "errorInput" : ""}>
+            </input>
             {errors.lastName && <p className="errorText">{errors.lastName}</p>}
           </div>
 
@@ -128,8 +133,8 @@ function Registration() {
               placeholder="Email *"
               value={formData.email}
               onChange={handleChange}
-              className={errors.email ? "errorInput" : ""}
-            />
+              className={errors.email ? "errorInput" : ""}>
+            </input>
             {errors.email && <p className="errorText">{errors.email}</p>}
           </div>
 
@@ -139,8 +144,8 @@ function Registration() {
               name="phone"
               placeholder="Phone"
               value={formData.phone}
-              onChange={handleChange}
-            />
+              onChange={handleChange}>
+            </input>
           </div>
 
           <div>
@@ -150,8 +155,8 @@ function Registration() {
               placeholder="Password *"
               value={formData.password}
               onChange={handleChange}
-              className={errors.password ? "errorInput" : ""}
-            />
+              className={errors.password ? "errorInput" : ""}>
+            </input>
             {errors.password && <p className="errorText">{errors.password}</p>}
           </div>
 
@@ -162,8 +167,8 @@ function Registration() {
               placeholder="Confirm Password *"
               value={formData.confirmPassword}
               onChange={handleChange}
-              className={errors.confirmPassword ? "errorInput" : ""}
-            />
+              className={errors.confirmPassword ? "errorInput" : ""}>
+            </input>
             {errors.confirmPassword && (
               <p className="errorText">{errors.confirmPassword}</p>
             )}

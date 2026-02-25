@@ -1,4 +1,5 @@
-.page {
+.page 
+{
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,7 +11,8 @@
 }
 
 /* 🔥 Top Typing Animation */
-.topTyping {
+.topTyping 
+{
   position: absolute;
   top: 40px;
   font-size: 28px;
@@ -24,7 +26,8 @@
 }
 
 /* Card */
-.card {
+.card 
+{
   background: rgba(255, 255, 255, 0.95);
   padding: 50px;
   border-radius: 20px;
@@ -35,25 +38,31 @@
   backdrop-filter: blur(10px);
 }
 
-.logo {
+.logo 
+{
   font-size: 40px;
   margin-bottom: 15px;
 }
 
-.description {
+.description 
+{
   margin: 20px 0;
   font-size: 16px;
   color: #555;
 }
 
-.buttonContainer {
+
+.buttonContainer 
+{
   margin-top: 25px;
   display: flex;
   justify-content: center;  /* center single button */
 }
 
+
 /* General Button */
-button {
+button 
+{
   padding: 12px 30px;
   font-size: 16px;
   border: none;
@@ -64,31 +73,36 @@ button {
 }
 
 /* Register Button */
-.registerBtn {
+.registerBtn 
+{
   background: linear-gradient(45deg, #16a34a, #22c55e);
   color: white;
 }
 
 /* Already Logged In Button */
-.loginBtn {
+.loginBtn 
+{
   background: linear-gradient(45deg, #1e3a8a, #2563eb);
   color: white;
 }
 
 /* Hover Effect */
-button:hover {
+button:hover 
+{
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Animations */
-@keyframes blink {
+@keyframes blink 
+{
   50% {
     border-color: transparent;
   }
 }
 
-@keyframes fadeSlide {
+@keyframes fadeSlide 
+{
   from {
     opacity: 0;
     transform: translateY(40px);

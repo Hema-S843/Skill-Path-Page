@@ -1,109 +1,51 @@
-/* Main Container */
-.aptitudeContainer {
-  display: flex;
-  height: 100vh;
-  background-color: #f4f8ff; /* Light blue background */
-  font-family: "Segoe UI", sans-serif;
-}
-
-/* Sidebar */
-.aptitudeSidebar {
-  width: 280px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-right: 2px solid #e0e7ff;
-  box-shadow: 2px 0 8px rgba(0, 0, 255, 0.05);
-}
-
-/* Progress Section */
-.aptitudeProgress h3 {
-  color: #1e3a8a; /* Dark Blue */
-  margin-bottom: 15px;
-}
-
-.progressBar {
-  width: 100%;
-  height: 10px;
-  background-color: #e0e7ff;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 8px;
-}
-
-.progress {
-  height: 100%;
-  background: linear-gradient(90deg, #2563eb, #1e40af);
-  transition: 0.3s ease;
-}
-
-.progressText {
-  font-size: 14px;
-  color: #1e3a8a;
-}
-
-/* Question List */
-.questionList {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.questionList li {
-  padding: 10px 12px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  font-size: 14px;
-  color: #1e3a8a;
-  display: flex;
-  align-items: center;
-}
-
-.questionList li:hover {
-  background-color: #e0e7ff;
-}
-
-.questionList li.active {
-  background-color: #2563eb;
-  color: white;
-}
-
-.check {
-  margin-right: 8px;
-}
-
-/* Main Content */
-.aptitudeContent {
-  flex: 1;
+.aptitute-container {
   padding: 40px;
-  background-color: #f8fbff;
+  text-align: center;
 }
 
-.aptitudeContent h2 {
-  color: #1e3a8a;
-  margin-bottom: 15px;
+.aptitute-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
-.aptitudeContent p {
-  font-size: 16px;
-  color: #334155;
-  line-height: 1.6;
+/* Grid layout for square cards */
+.aptitute-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
-/* Button */
-.completeBtn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 14px;
+/* Square cards */
+.aptitute-card {
+  background: #f4f6f9;
+  width: 200px;
+  height: 200px; /* fixed square shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
   cursor: pointer;
-  transition: 0.2s ease;
+  padding: 15px;
+  text-align: center;
 }
 
-.completeBtn:hover {
-  background-color: #1e40af;
+.aptitute-card:hover {
+  transform: scale(1.05);
+  background: #e3f2fd;
+}
+
+.aptitute-card h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+  font-size: 18px;
+}
+
+.aptitute-card p {
+  color: #333;
+  font-size: 14px;
 }

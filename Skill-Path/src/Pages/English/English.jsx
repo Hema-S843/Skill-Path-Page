@@ -1,8 +1,11 @@
 import React from "react";
 import "./English.css";
+import Sidebar from "../Components/Sidebar"
 
 function English() {
   return (
+    <>
+    <Sidebar/>
     <div className="english-container">
       <h1 className="english-title">📘 English Practice</h1>
 
@@ -21,6 +24,7 @@ function English() {
         <p>Read passages and answer questions.</p>
       </div>
     </div>
+    </>
   );
 }
 

@@ -2,28 +2,28 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;   /* side scrolling stop */
+  overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
 
 .topbar {
-  height: 70px;   /* little balanced size */
+  height: 80px;   /* Slightly taller */
   width: 100%;
   background: linear-gradient(90deg, #1e3a8a, #2563eb);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;   /* reduced padding to avoid overflow */
+  padding: 0 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  box-sizing: border-box;   /* prevents overflow issue */
+  box-sizing: border-box;
 }
 
 /* ================= LOGO ================= */
 
 .logo {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;   /* Increased */
+  font-weight: 800;
   color: white;
   letter-spacing: 1px;
 }
@@ -34,7 +34,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;   /* Slightly increased gap */
   margin: 0;
   padding: 0;
 }
@@ -42,9 +42,9 @@ body {
 .navLinks li a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 8px 14px;
+  font-size: 18px;   /* Increased */
+  font-weight: 700;
+  padding: 10px 16px;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -71,10 +71,10 @@ body {
 .profile {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: white;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;   /* Increased */
+  font-weight: 600;
 }
 
 /* ================= LOGOUT BUTTON ================= */
@@ -82,20 +82,20 @@ body {
 .logoutBtn {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: #ff4d4d;   /* 🔴 New Red Color */
+  gap: 8px;
+  background: #ff4d4d;
   border: none;
   cursor: pointer;
   color: white;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 7px 14px;
+  font-size: 16px;   /* Increased */
+  font-weight: 700;
+  padding: 9px 16px;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .logoutBtn:hover {
-  background: #cc0000;   /* darker red hover */
+  background: #cc0000;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

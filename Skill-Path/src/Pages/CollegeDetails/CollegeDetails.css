@@ -1,0 +1,110 @@
+/* ========== Page Container ========== */
+
+.college-container {
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* ========== Section Titles ========== */
+
+.college-title,
+.passion-title {
+  font-size: 36px;   /* Increased */
+  margin-bottom: 40px;
+  color: #1e3a8a;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ========== Group Box Layout ========== */
+
+.group-box-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ========== Group Box Card ========== */
+
+.group-box {
+  width: 270px;   /* Slightly increased */
+  background: #f4f6f9;
+  padding: 35px 25px;
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.group-box:hover {
+  transform: translateY(-6px);
+  background: #dbeafe;
+}
+
+.group-box h3 {
+  color: #1e40af;
+  margin-bottom: 18px;
+  font-size: 22px;   /* Increased */
+  font-weight: 800;
+}
+
+.group-box li {
+  font-size: 17px;   /* Increased */
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* ========== Passion Section ========== */
+
+.passion-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.passion-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* ========== Passion Box ========== */
+
+.passion-box {
+  width: 280px;        /* Increased */
+  min-height: 220px;   /* Increased */
+  background: #f4f6f9;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.passion-box:hover {
+  transform: translateY(-6px);
+  background: #dbeafe;
+}
+
+.passion-box h3 {
+  color: #1e40af;
+  margin-bottom: 15px;
+  font-size: 26px;   /* Much Bigger */
+  font-weight: 800;
+}
+
+.passion-box p {
+  font-size: 19px;   /* Bigger Description */
+  color: #374151;
+  line-height: 1.8;
+  font-weight: 500;
+}

@@ -1,8 +1,12 @@
 import React from "react";
 import "./Aptitute.css";
-import Sidebar from"../Components/Sidebar"
+import Sidebar from"../Components/Sidebar";
+import { useNavigate } from "react-router-dom";
 
-function Aptitute() {
+function Aptitute() 
+{
+  const navigate = useNavigate();
+  
   const topics = [
     {
       title: "📊 Quantitative",

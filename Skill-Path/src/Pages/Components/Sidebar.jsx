@@ -16,6 +16,9 @@ function Sidebar({ user: propUser }) {
   }, [propUser]);
 
   const sections = [
+    { name: "CMT Exam" , path:"/cmtexam"},
+    { name: "T.T.E exam" , path:"/tteexam"},
+    { name: "MAT Sample" , path:"/matexam"},
     { name: "Aptitute", path: "/aptitute" },
     { name: "English", path: "/english" },
     { name: "Telugu", path: "/telugu" },

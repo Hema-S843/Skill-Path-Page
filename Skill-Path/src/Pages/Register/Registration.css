@@ -21,7 +21,8 @@
   font-weight: bold;
   background: linear-gradient(45deg, #facc15, #fb923c);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; /* this is correct */
+  color: transparent; /* add this for non-WebKit fallback */
   text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
   margin-bottom: 15px;
   animation: glow 2s infinite alternate;

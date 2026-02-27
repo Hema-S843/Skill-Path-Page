@@ -17,9 +17,9 @@ function Sidebar({ user: propUser }) {
 
   const sections = [
     { name: "CMT Exam" , path:"/cmtexam"},
-    { name: "T.T.E exam" , path:"/tteexam"},
+    { name: "T.T.E Exam" , path:"/tteexam"},
     { name: "MAT Sample" , path:"/matexam"},
-    { name: "Aptitute", path: "/aptitute" },
+    { name: "Aptitude", path: "/aptitute" },
     { name: "English", path: "/english" },
     { name: "Telugu", path: "/telugu" },
     { name: "College Details", path: "/college-details" },
@@ -32,30 +32,21 @@ function Sidebar({ user: propUser }) {
 
   return (
     <nav className="topbar">
-      {/* Logo */}
-      <div className="logo">
-        SkillPath
-      </div>
+      <div className="logo">SkillPath</div>
 
-      {/* Navigation Links */}
       <ul className="navLinks">
         {sections.map((section) => (
-          <li
-            key={section.name}
-            className={location.pathname === section.path ? "active" : ""}
-          >
+          <li key={section.name} className={location.pathname === section.path ? "active" : ""}>
             <Link to={section.path}>{section.name}</Link>
           </li>
         ))}
       </ul>
 
-      {/* Profile + Logout */}
       <div className="navRight">
         <div className="profile">
           <FaUserCircle size={23} />
           <span> Profile </span>
         </div>
-
         <button className="logoutBtn" onClick={handleLogout}>
           <FaSignOutAlt size={16} />
           <span>Logout</span>

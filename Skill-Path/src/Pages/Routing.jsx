@@ -14,6 +14,8 @@ import Telugu from "./Telugu/Telugu.jsx";
 import Cmtexam from "./CmtPage/Cmtexam.jsx";
 import Matexam from "./MatPage/Matexam.jsx";
 import CollegeDetails from "./CollegeDetails/CollegeDetails.jsx";
+     import Music from "./CollegeDetails/Passions/Music/Music.jsx";
+     import Design from "./CollegeDetails/Passions/Design/Design.jsx";
 
 
 function Routing() 
@@ -26,18 +28,20 @@ function Routing()
         <Route path="/register" element={<Registration />} />
         <Route path="/dashboard" element={< Dashboard />}/>
         <Route path="/login" element={<Login />} />
-        <Route path="/aptitute" element={<Aptitute />} />
+        <Route path="/aptitute" element={<Aptitute />} />  
                <Route path="/quantitative" element={<Quantitative />} />
                <Route path="/logical-reasoning" element={<LogicalReasoning />} />
                <Route path="/verbal-ability" element={<VerbalAbility />} />
                <Route path="/data-interpretation" element={<DataInterpretation />} />
                <Route path="/number-series" element={<NumberSeries />}/>
+       
         <Route path="/english" element={<English />}  />
         <Route path="/telugu" element={<Telugu />}  />
         <Route path="/cmtexam" element={<Cmtexam />} />
-        <Route path="/tteexam" element={<Cmtexam />} />
         <Route path="/matexam" element={<Matexam />} />
         <Route path="/college-details" element={<CollegeDetails />}  />
+                <Route path="/passion/music" element={<Music />} />
+                <Route path="/passion/design" element={<Design />} />
       </Routes>
     </>
   );

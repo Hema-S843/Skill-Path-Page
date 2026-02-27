@@ -1,0 +1,128 @@
+/* ================= BODY ================= */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+}
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+  text-align: center;
+  font-size: 38px;
+  margin: 20px 0 40px 0;
+  color: #1e3a8a;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= GRID LAYOUT ================= */
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 0 60px 60px 60px;
+}
+
+/* ================= CARD DESIGN ================= */
+
+.exam-card {
+  background: linear-gradient(145deg, #ffffff, #e6eeff);
+  border-radius: 22px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card hover animation */
+.exam-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ================= CARD TEXT ================= */
+
+.exam-card h2 {
+  color: #2563eb;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.exam-card h4 {
+  color: #1e40af;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.exam-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.exam-card strong {
+  color: #111827;
+}
+
+/* ================= LINKS ================= */
+
+.exam-card a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.exam-card a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SAMPLE BUTTON (LIGHT STYLE) ================= */
+
+.sample-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 9px 16px;
+  background-color: #e0e7ff;   /* Light pastel */
+  color: #1e3a8a;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #c7d2fe;
+  transition: all 0.3s ease;
+}
+
+.sample-link:hover {
+  background-color: #c7d2fe;
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .exams-grid {
+    padding: 0 40px 40px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .exams-grid {
+    padding: 0 20px 30px 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .exam-card {
+    padding: 25px 20px;
+  }
+}

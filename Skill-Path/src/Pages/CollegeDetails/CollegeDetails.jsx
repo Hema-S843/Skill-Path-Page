@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 import "./CollegeDetails.css";
 
-function CollegeDetails() {
+function CollegeDetails() 
+{
   const navigate = useNavigate();
 
   const syllabusData = {
@@ -52,11 +53,13 @@ function CollegeDetails() {
   const passionData = {
     music: {
       title: "🎵 Music",
+      path:"/music",
       description:
         "Music is the art of expressing emotions through sound and rhythm."
     },
     design: {
       title: "🎨 Design",
+      path:"/design",
       description:
         "Design is creating attractive and useful visuals or products using creativity."
     },

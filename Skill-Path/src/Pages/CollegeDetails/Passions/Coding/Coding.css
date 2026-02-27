@@ -1,0 +1,154 @@
+/* ================= BODY ================= */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+}
+
+/* ================= PAGE TITLE ================= */
+
+.coding-title {
+  text-align: center;
+  font-size: 38px;
+  margin: 20px 0 40px 0;
+  color: #1e3a8a;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= GRID LAYOUT ================= */
+
+.coding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 0 60px 60px 60px;
+}
+
+/* ================= CARD DESIGN ================= */
+
+.coding-card {
+  background: linear-gradient(145deg, #ffffff, #e6eeff);
+  border-radius: 22px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card hover animation */
+.coding-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ================= CARD TEXT ================= */
+
+.coding-card h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.coding-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
+
+.coding-card h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #4338ca;
+  font-size: 15px;
+}
+
+.coding-card p,
+.coding-card li {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.coding-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coding-card li {
+  margin: 6px 0;
+}
+
+/* ================= SKILLS LEVEL COLORS ================= */
+
+.coding-card li strong {
+  font-weight: 600;
+}
+
+/* Beginner */
+.coding-card li strong:contains("Beginner") {
+  color: #16a34a;
+}
+
+/* Intermediate */
+.coding-card li strong:contains("Intermediate") {
+  color: #ca8a04;
+}
+
+/* Advanced */
+.coding-card li strong:contains("Advanced") {
+  color: #dc2626;
+}
+
+/* ================= LINKS ================= */
+
+.links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  display: inline-block;
+  padding: 9px 16px;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #c7d2fe;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #c7d2fe;
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .coding-grid {
+    padding: 0 40px 40px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coding-grid {
+    padding: 0 20px 30px 20px;
+  }
+
+  .coding-title {
+    font-size: 28px;
+  }
+
+  .coding-card {
+    padding: 25px 20px;
+  }
+}

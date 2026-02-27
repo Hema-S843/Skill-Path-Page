@@ -65,16 +65,19 @@ function CollegeDetails()
     },
     coding: {
       title: "💻 Coding",
+      path:"/coding",
       description:
         "Coding is writing instructions to build apps, websites, and software."
     },
     drawing: {
       title: "✏️ Drawing",
+      path:"/drawing",
       description:
         "Drawing is expressing ideas and imagination through sketches and art."
     },
     sports: {
       title: "⚽ Sports",
+      path:"/sports",
       description:
         "Sports help improve physical fitness, teamwork, and discipline."
     },

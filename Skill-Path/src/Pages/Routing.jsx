@@ -16,6 +16,9 @@ import Matexam from "./MatPage/Matexam.jsx";
 import CollegeDetails from "./CollegeDetails/CollegeDetails.jsx";
      import Music from "./CollegeDetails/Passions/Music/Music.jsx";
      import Design from "./CollegeDetails/Passions/Design/Design.jsx";
+     import Coding from "./CollegeDetails/Passions/Coding/Coding.jsx";
+     import Drawing from "./CollegeDetails/Passions/Drawing/Drawing.jsx";
+     import Sports from "./CollegeDetails/Passions/Sports/Sports.jsx";
 
 
 function Routing() 
@@ -42,6 +45,9 @@ function Routing()
         <Route path="/college-details" element={<CollegeDetails />}  />
                 <Route path="/passion/music" element={<Music />} />
                 <Route path="/passion/design" element={<Design />} />
+                <Route path="/passion/coding" element={<Coding />} />
+                <Route path="/passion/sports" element={<Sports />} />
+                <Route path="/passion/drawing" element={<Drawing />} />
       </Routes>
     </>
   );

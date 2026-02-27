@@ -1,0 +1,101 @@
+/* ================= PAGE WRAPPER ================= */
+
+.drawing-page {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fff7ed, #fdf2f8);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.drawing-page .exams-container {
+  padding: 40px 60px;
+}
+
+/* ================= PAGE TITLE ================= */
+
+.drawing-page .page-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #db2777;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* ================= GRID ================= */
+
+.drawing-page .exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* ================= CARD ================= */
+
+.drawing-page .exam-card {
+  background: linear-gradient(145deg, #ffffff, #ffe4e6);
+  border-radius: 22px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid #fecdd3;
+}
+
+.drawing-page .exam-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(219, 39, 119, 0.25);
+}
+
+/* ================= TEXT ================= */
+
+.drawing-page .exam-card h2 {
+  font-size: 20px;
+  color: #be185d;
+  margin-bottom: 8px;
+}
+
+.drawing-page .exam-card h4 {
+  font-size: 14px;
+  color: #f472b6;
+  margin-bottom: 12px;
+}
+
+.drawing-page .exam-card p {
+  font-size: 14px;
+  color: #374151;
+  margin: 6px 0;
+}
+
+.drawing-page .official-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #fbcfe8;
+  color: #9d174d;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #f9a8d4;
+  transition: 0.3s ease;
+}
+
+.drawing-page .official-link:hover {
+  background: #f9a8d4;
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .drawing-page .exams-container {
+    padding: 20px;
+  }
+
+  .drawing-page .page-title {
+    font-size: 26px;
+  }
+}
